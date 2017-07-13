@@ -1,0 +1,27 @@
+- July 13 -
+
+Given the graph with vertices in 3 dimensions, want to project each link / knot
+into 2 dimensions so that we can see the over and under crossings of the 
+object. 
+
+A first step is to induce an arbitrary orientation on the structure.
+To do so, consider the graph to be directed so that the graph has 
+exactly a single loop (all edges are coherent). 
+
+A crossing is said to be "right-handed" if it obeys the "right-hand-rule".
+Place your hand with thumb in the direction of the over strand. 
+Direct your pointer finger in the direction of the unnder strand.
+Curl your fingers so that they are perpendicular with the thumb / pointer.
+If they go out of the page ('positive') it is right-handed.
+Otherwise, it is left-handed.
+
+The projection is arbitrary so long as it is consistent over all loops. 
+
+Idea:
+	When projecting down a dimension ("removing the z-direction"),
+	note which are closer to 0, or which would hit the page first
+	if you were to push the object into a flat object. 
+
+We are trying to "planarize" the loop but we need to know which lines are 
+on top and which are on bottom.
+ 
