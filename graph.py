@@ -20,3 +20,9 @@ class Graph:
         self.adj_list[u].add(v)
         self.adj_list[v].add(u)
 
+    def __contains__(self, edge):
+        if edge[0] in self.adj_list[edge[1]] and edge[1] in self.adj_list[edge[0]]:
+            return True
+        else:
+            return False
+

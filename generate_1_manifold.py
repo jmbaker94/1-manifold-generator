@@ -46,12 +46,11 @@ def generate_1_manifold(g=None):
 
     # Ensure that each vertex gets up to 2 neighbors exactly
     for v in g.vertices:
-        if len(g.ad_list[v]) < 2:
+        if len(g.adj_list[v]) < 2:
             found = False
-            i = 0
             while not found:
                 q = heapq.heappop(heap_list[v]).pair[1]
-                if len(g.adj_list[q]) < 2:
+                if len(g.adj_list[q]) < 2 and (q, v) not in g:
                     found = True
                     g.add_edge(v, q)
                 heapq.heapify(heap_list[v])
